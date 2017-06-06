@@ -10,24 +10,23 @@
     <!-- Custom CSS -->
     <link href="shop-homepage.css" rel="stylesheet">
 	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Muli,Hammersmith+One,Tauri' rel='stylesheet' type='text/css'>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-   <link rel="stylesheet" href="navstyles.css">
 </head>
-<body>
+<body <?php body_class();?>>
 <header>
     <div class="topOfNav">
         <a  href="http://calvincodes.com/protosite/index.php">
-            <img  class="logo" src="images/webLogo.png" alt="Logo" height="78" width="300" />
+            <img  class="logo" src="<?php bloginfo('template_directory'); ?>/images/webLogo.png" alt="Logo" height="78" width="300" />
         </a>
         <a href="#">
-        	<img class="cart" src="images/assets/cart.png" alt="cart"/>
+        	<img class="cart" src="<?php bloginfo('template_directory'); ?>/images/assets/cart.png" alt="cart"/>
         </a>
     </div>
-	<div id="cssmenu">
+	<!-- <div id="cssmenu">
   <ul>
       <li><a href="about.php">ABOUT</a></li>
       <li><a href="product.php">PRODUCTS</a>
@@ -54,11 +53,14 @@
            <li><a href="#">Personal</a></li>
         </ul>
      </li>
-  </ul>
-</div>
-    </header>
-<!-- nav-->
+ </ul>
+</div> -->
 
+
+<!--Begin WP Menu-->
+    <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'navigation',)); ?>
+    <!--End WP Menu-->
+<?php wp_head();?>
 <!-- sidebar-->
 <aside class="sidenav">
     <ul>
@@ -72,94 +74,17 @@
 
 <!-- maincontent-->
 <section class="cats">
-    <h2 class="pageID"><a href="sweet.php">Sweet</a></h2>
-		<div class="featured">
-			<a href="dest.php"><img class="product" src="images/pizza.jpg" alt="pizza"></a>
-			<h3 class="pname">Pizza</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/burgers.jpg" alt="burger"></a>
-			<h3 class="pname">Cheeseburger</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/hotdog.jpg" alt="hotdog"></a>
-			<h3 class="pname">Hotdog</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-        <h2 class="pageID"><a href="salty.php">Salty</a></h2>
-		<div class="featured">
-			<a href="dest.php"><img class="product" src="images/pizza.jpg" alt="pizza"></a>
-			<h3 class="pname">Pizza</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/burgers.jpg" alt="burger"></a>
-			<h3 class="pname">Cheeseburger</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/hotdog.jpg" alt="hotdog"></a>
-			<h3 class="pname">Hotdog</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-        <h2 class="pageID"><a href="savory.php">Savory</a></h2>
-		<div class="featured">
-			<a href="dest.php"><img class="product" src="images/pizza.jpg" alt="pizza"></a>
-			<h3 class="pname">Pizza</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/burgers.jpg" alt="burger"></a>
-			<h3 class="pname">Cheeseburger</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/hotdog.jpg" alt="hotdog"></a>
-			<h3 class="pname">Hotdog</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-        <h2 class="pageID"><a href="gifts.php">Gifts and Testers</a></h2>
-		<div class="featured">
-			<a href="dest.php"><img class="product" src="images/pizza.jpg" alt="pizza"></a>
-			<h3 class="pname">Pizza</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/burgers.jpg" alt="burger"></a>
-			<h3 class="pname">Cheeseburger</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
-		<div class="featured">
-			<a href="dest.php"><img class="product"src="images/hotdog.jpg" alt="hotdog"></a>
-			<h3 class="pname">Hotdog</h3>
-			<p>Pizza is a tasy italian food. Made up of mozarella cheese and tomato sauce. it can have a thin or thick crust</p>
-            <p>Price: $15</p>
-            <a href="#"><img class="cta" src="images/atoc.png"></a>
-		</div>
+	<div class="content">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+		<article id="article">
+			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<small>Posted on the <?php the_time('F jS, Y'); ?> in the <?php the_category(); ?></small>
+			<?php the_content(); ?>
+		</article>
+		<?php endwhile; endif; ?>
+		<small>index.php</small>
+	</div>
+
 </section>
 <!-- maincontent-->
 <!-- footer-->
@@ -180,6 +105,7 @@
             <img title="Instagram" alt="RSS" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" width="35" height="35" />
         </a>
     </div>
+	<?php wp_footer();?>
 <footer>
     <div class="footnav">
         <div>
@@ -217,7 +143,7 @@
 
         <div>
             <h2>Can't find what you're looking for? Search here!</h2>
-            <p class="search"><img class="micon" src="images/micon.png">Search</p>
+            <p class="search"><img class="micon" src="<?php bloginfo('template_directory'); ?>/images/micon.png">Search</p>
         </div>
     </div>
 <div class="smol"><small>
