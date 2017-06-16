@@ -53,7 +53,6 @@
     </div>
 
     <div>
-        <h2>Can't find what you're looking for? Search here!</h2>
         <p class="search"><img class="micon" src="<?php bloginfo('template_directory'); ?>/images/micon.png">Search</p>
     </div>
 </div>
@@ -64,8 +63,19 @@
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 </small></div>
 <!-- jQuery -->
-<script src="scripts/jquery.js"></script>
+<script>
+$(function(){
+    $(".sub-menu").hide();
+    $(".menu-item-has-children").on("mouseover", function(){
+        if($(".menu-item-has-children").on("mouseover")){
+            $(".sub-menu").toggle().show();
+        } else {
+            $(".sub-menu").hide();
+        }
+    });
+});
 
+</script>
 <!-- Bootstrap Core JavaScript -->
 <script src="scripts/bootstrap.min.js"></script>
 </footer>
