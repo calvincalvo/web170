@@ -59,41 +59,44 @@ body {
   padding: 20px;
   border-radius: 5px; }
 
-aside {
+.aside {
   margin: 0 auto;
   max-width: 150px;
   background-color: white;
   border-radius: 5px;
   padding: 15px 20px 5px 20px; }
-  aside h2 {
+  .aside h2 {
     border-bottom: 1px solid #000; }
-  aside ul {
+  .aside ul {
     list-style-type: none; }
-    aside ul li {
+    .aside ul li {
       margin-top: 7px; }
-  aside a {
+  .aside a {
     text-decoration: none;
     color: #57572e; }
 
-.about-contents #spotlight-about-image {
-  max-width: 300px; }
-.about-contents article {
-  float: right;
-  display: flex;
-  flex-flow: column;
-  max-width: 625px; }
-
 #widgets {
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 960px;
   display: flex;
   justify-content: space-between;
-  background-color: #e7e6d0;
+  background-color: #fff;
+  padding: 10px 15px;
   border-radius: 5px; }
   #widgets:last-child {
     margin-right: 0px; }
   #widgets section {
     max-width: 500px; }
+  #widgets a {
+    text-decoration: none;
+    color: #000; }
+  #widgets h2 {
+    border-bottom: 1px solid #000; }
+  #widgets ul {
+    list-style-type: none;
+    margin-right: 15px; }
+    #widgets ul li:hover {
+      background-color: #b3b3b3; }
 
 .main-stuff .cats {
   max-width: 600px; }
@@ -119,11 +122,45 @@ aside {
 .main-stuff .sidenav {
   float: right; }
 
+.about-contents ul {
+  list-style-type: none; }
+.about-contents a {
+  text-decoration: none;
+  color: #252513; }
+.about-contents article {
+  width: 58%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px 30px 5px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-flow: column;
+  margin-left: auto;
+  float: right; }
+  .about-contents article .theTitle {
+    border-bottom: 1px solid #000; }
+  .about-contents article small {
+    color: #57572e; }
+    .about-contents article small li {
+      color: inherit; }
+.about-contents ol {
+  margin-left: 30px; }
+.about-contents #spotlight-about-image {
+  max-width: 300px; }
+
 .social {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.post-excerpt p {
+  float: right;
+  max-width: 70%; }
+.post-excerpt .read-more {
+  float: none;
+  text-align: right;
+  max-width: 100%; }
 
 footer {
   background-color: #57572e;
