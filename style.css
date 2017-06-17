@@ -61,7 +61,7 @@ body {
 
 .aside {
   margin: 0 auto;
-  max-width: 150px;
+  max-width: 190px;
   background-color: white;
   border-radius: 5px;
   padding: 15px 20px 5px 20px; }
@@ -74,6 +74,10 @@ body {
   .aside a {
     text-decoration: none;
     color: #57572e; }
+  .aside blockquote {
+    font-weight: bold;
+    color: #36351c;
+    font-style: italic; }
 
 #widgets {
   margin: 10px auto;
@@ -128,15 +132,13 @@ body {
   text-decoration: none;
   color: #252513; }
 .about-contents article {
-  width: 58%;
   background-color: white;
   border-radius: 5px;
   padding: 15px 30px 5px 30px;
   margin-bottom: 30px;
   display: flex;
   flex-flow: column;
-  margin-left: auto;
-  float: right; }
+  max-width: 640px; }
   .about-contents article .theTitle {
     border-bottom: 1px solid #000; }
   .about-contents article small {
@@ -146,7 +148,8 @@ body {
 .about-contents ol {
   margin-left: 30px; }
 .about-contents #spotlight-about-image {
-  max-width: 300px; }
+  max-width: 330px;
+  margin-bottom: 20px; }
 
 .social {
   margin: 0 auto;

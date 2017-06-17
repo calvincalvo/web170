@@ -9,6 +9,24 @@ Description: This is the demo theme for the WEB170 section 02 class foor Spring 
 Version: 1.0
 
 */
+function get_my_title_tag(){
+    global $post;
+    if ( is_front_page() ) {
+        bloginfo('description');
+    } elseif ( is_page() || is_single() ) {
+        the_title();
+    } else {
+        bloginfo('description');
+    }
+    if ( $post->post_parent ) {
+        echo ' | ';
+        echo get_the_title($post->post_parent);
+    }
+    echo ' | ';
+    bloginfo('name');
+    echo ' | ';
+    echo 'Seattle, WA.';
+}
 // register sidebar sidenav
 register_sidebar(array(
     'before_widget' => '<div id="%1$s" class="widget %2$s">',

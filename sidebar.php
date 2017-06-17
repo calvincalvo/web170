@@ -27,7 +27,7 @@
 	<?php dynamic_sidebar(1); ?>
 	<div id="pull-quote" class="widget">
 		<?php if(get_post_meta($post->ID, 'quote', true)) : ?>
-		<blockquote>hihihihi</blockquote>
+		<blockquote><?php echo get_post_meta($post->ID, 'quote', true);?></blockquote>
 		<?php endif; ?>
 	</div>
 	<?php dynamic_sidebar(1); ?>

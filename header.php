@@ -4,6 +4,7 @@
 	<title>Products</title>
     <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="<?php echo strip_tags( get_the_excerpt()) ; ?>">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
